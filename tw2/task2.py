@@ -3,6 +3,7 @@ Teaching Week 1
 Blanker Program
 """
 
+
 # Created new line function does print
 # new line
 def new_line():
