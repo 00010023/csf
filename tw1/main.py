@@ -10,7 +10,7 @@ except ImportError as error:
 
 
 # Initializing main function for python script
-def main(name):
+def main():
     print("Hello Teaching Week 1")
 
     number_one = int(input("Please, type your first number here: "))
@@ -53,5 +53,5 @@ def main(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main('PyCharm')
+    main()
     pass
