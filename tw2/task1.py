@@ -1,52 +1,134 @@
-#
-# Teaching Week 1
-# Blanker Program
-#
+"""
+Teaching Week 2
+Geneslant Program
+"""
 
-# Created new line function does print
-# new line
-def new_line():
-    print(">", "|")
+"""
+The first example
+Example 1: Define a function that takes an argument.
+Identify what code is the argument and what code is the parameter.
+"""
+
+
+def example1(string, isAdmin=False):
+    # Parameters usage example
+    print("The passed data is", string)
+
+    # Argument usage
+    print("The passed argument is", isAdmin)
     pass
 
-# A function that does print 3 lines
-def three_lines():
-    for lines in range(3):
-        new_line()
-        pass
+
+"""
+The second example
+Example 2: Call your function from Example
+1 three times with different kinds of arguments:
+a value, a variable, and an expression.
+Identify which kind of argument is which.
+"""
+
+
+def example2():
+    # Parameter with String type
+    example1("just string")
+
+    # Parameter with Number type
+    example1(10101001101)
+
+    # Parameter & Argument
+    example1(True, True)
     pass
 
-# A function that print 3 three lined
-# blank lines
-def nine_lines():
-    for lines in range(3):
-        three_lines()
-        pass
+
+"""
+The third example
+Example 3: Create a function with a local variable.
+Show what happens when you try to use that variable outside the function.
+Explain the results.
+"""
+
+variable_for_example3 = "passing string"
+
+
+def example3():
+    print("Printing variable from outside:", variable_for_example3)
     pass
 
-# A function that prints 25 lines of
-# empty blank lines and cleans space
-def clear_screen():
-    for lines in range(2):
-        nine_lines()
-        pass
-    for lines in range(2):
-        three_lines()
-        pass
-    for lines in range(1):
-        new_line()
-        pass
+
+"""
+The fourth example
+Example 4: Create a function that takes an argument. 
+Give the function parameter a unique name. 
+Show what happens when you try to use that parameter name outside the function. 
+Explain the results.
+"""
+
+variable_for_example4, example = "hello", "world"
+
+
+# Taking existing variable name as argument
+def example4(example):
+
+    # If you took existing argument as variable
+    # Function's argument will shadow existing variable
+    # But still you can specify the type in order to differentiate
+
+    """
+    :type example: str
+    """
+
+    # Now, let's print the argument here with
+    # variable_for_example4
+    print("The passed argument is:", example)
+
+    # Expecting value is hello because whatever I'll
+    # put to example variable, it will be shadowed with
+    # new variable argument here
+
     pass
 
-# Initiating new program and running
-# it
+
+"""
+The fifth example
+Example 5: Show what happens when a variable defined outside a function 
+has the same name as a local variable inside a function. 
+Explain what happens to the value of each variable as the program runs.
+"""
+
+
+def example5():
+
+    # As we remember, it accepts example
+    # Now let's try with example either
+    example4(example=example)
+    pass
+
+
+# The main program where I'll be executing all inits
+def main():
+    # Executing the first example
+    example1("Hello", True)
+
+    # Executing the first example
+    example2()
+
+    # Executing the first example
+    example3()
+
+    # Executing the first example
+    example4(variable_for_example4)
+
+    # Executing the first example
+    example5()
+
+    pass
+
+
+# Initiating main program
 if __name__ == '__main__':
 
-    # Nine lines of empty space
-    nine_lines()
-
-    # Just a line
-    print()
-
-    clear_screen()
+    try:
+        main()
+    except Exception as error:
+        print("Error occurred:", error)
     pass

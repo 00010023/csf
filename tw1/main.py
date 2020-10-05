@@ -1,6 +1,6 @@
-#
-# This is a sample hello world project for teaching week 1
-#
+"""
+This is a sample hello world project for teaching week 1
+"""
 
 # Importing math package to get sqrt function
 try:
