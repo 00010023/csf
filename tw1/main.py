@@ -40,12 +40,16 @@ def main():
 
         # Find and print the square root of the number
         print("Square root of number one is:", math.sqrt(number_one))
+        
+        pass
 
     # If it doesn't then
     else:
 
         # Just throw error saying that it doesn't have square root!
         print(f"The number {number_one} does not have square root!")
+
+        pass
 
     # Closing function
     pass
