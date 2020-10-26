@@ -1,5 +1,5 @@
 """
-This is aefwefwe sample hello world project for teaching week 1
+This is aefwefwe sample hello world project for teaching week 1 rgrgrgr
 """
 
 # Importing math package to get sqrt function
